@@ -27,8 +27,7 @@ class RevisarSesion
 
     private function existeId(): bool
     {
-        if(!isset($_SESSION[SESSION_ID]))
-        {
+        if (!isset($_SESSION[SESSION_ID])) {
             return false;
         }
 
@@ -37,8 +36,7 @@ class RevisarSesion
 
     private function idEstaVacia(): bool
     {
-        if(empty($_SESSION[SESSION_ID]))
-        {
+        if (empty($_SESSION[SESSION_ID])) {
             return false;
         }
 
@@ -47,8 +45,7 @@ class RevisarSesion
 
     private function idEsValido(): bool
     {
-        if(!$this->_validarId->validar($_SESSION[SESSION_ID]))
-        {
+        if (!$this->_validarId->validar($_SESSION[SESSION_ID])) {
             return false;
         }
 
@@ -57,8 +54,7 @@ class RevisarSesion
     
     private function caduco(): bool
     {
-        if((time() - $_SESSION[SESSION_CREACION]) > $_SESSION[SESSION_CADUCIDAD])
-        {
+        if ((time() - $_SESSION[SESSION_CREACION]) > $_SESSION[SESSION_CADUCIDAD]) {
             return false;
         }
 

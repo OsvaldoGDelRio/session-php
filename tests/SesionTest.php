@@ -5,8 +5,8 @@ namespace test;
 
 session_start();
 
-define('SESSION_ID','ahau3333hauhsuhs');
-define('SESSION_CREACION','duiehiuwhuih3333wu');
+define('SESSION_ID', 'ahau3333hauhsuhs');
+define('SESSION_CREACION', 'duiehiuwhuih3333wu');
 define('SESSION_CADUCIDAD', 'idjeifiefiehiih4i4i5i5hh');
 define('CADUCIDAD_DE_SESION', 3600);
 
@@ -23,7 +23,7 @@ class SesionTest extends TestCase
 {
     public function setUp(): void
     {
-        $this->sesion = new Sesion(new SesionId('os'));    
+        $this->sesion = new Sesion(new SesionId('os'));
     }
 
     //Sesion
@@ -76,7 +76,6 @@ class SesionTest extends TestCase
         $_SESSION[SESSION_CADUCIDAD] = 10;
         $revisar = new RevisarSesion(new ValidarID(true));
         $this->assertTrue($revisar->revisar());
-    
     }
 
     //EliminarSesion
@@ -90,7 +89,7 @@ class SesionTest extends TestCase
         $this->assertArrayNotHasKey(SESSION_CREACION, $_SESSION);
     }
 
-    //ValidarID 
+    //ValidarID
 
     /**
      * DUMMY TEST

@@ -9,11 +9,9 @@ use const CADUCIDAD_DE_SESION;
 
 class Sesion
 {
-    public function __construct
-    (
+    public function __construct(
         SesionId $sesionId
-    )
-    {   
+    ) {
         $this->setSesionId($sesionId->id());
         $this->setCreacion();
         $this->setCaducidad();

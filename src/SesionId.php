@@ -9,7 +9,7 @@ class SesionId
 
     public function __construct(string $id)
     {
-        $this->_id = $this->setId($id); 
+        $this->_id = $this->setId($id);
     }
 
     public function id(): string
@@ -26,9 +26,8 @@ class SesionId
 
     private function estaVacio(string $string): void
     {
-        if(empty($string))
-        {
-            throw new Exception("El ID de sesión no puede estar vacío"); 
+        if (empty($string)) {
+            throw new Exception("El ID de sesión no puede estar vacío");
         }
     }
 }
